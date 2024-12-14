@@ -19,3 +19,4 @@ COPY --from=base $VIRTUAL_ENV $VIRTUAL_ENV
 COPY ./app ./app
 
 EXPOSE 8000
+CMD python -m app
