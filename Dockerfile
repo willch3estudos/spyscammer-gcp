@@ -17,3 +17,5 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY --from=base $VIRTUAL_ENV $VIRTUAL_ENV
 
 COPY ./app ./app
+
+EXPOSE 8000
