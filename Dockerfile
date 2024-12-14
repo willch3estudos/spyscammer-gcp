@@ -16,4 +16,4 @@ ENV VIRTUAL_ENV=/opt/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY --from=base $VIRTUAL_ENV $VIRTUAL_ENV
 
-COPY ./src ./src
+COPY ./app ./app
