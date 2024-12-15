@@ -41,6 +41,7 @@ async def info_data(
         "request": request,
     }
     payload = scammer_adjust_payload(data)
+    print(f'requests: {request}')
     print(f'payload: {payload}')
     respose = service.create_data_scammer(payload)
 

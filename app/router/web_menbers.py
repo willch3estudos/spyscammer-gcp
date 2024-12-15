@@ -46,9 +46,9 @@ async def login(
     response = service.get_auth_member(email, password)
     if response is not None:
         logger.info(f'| logado com -- {response["name"]} - {response["email"]}')
-        context['username'] = response['username']
+        context['username'] = response['name']
         context['email'] = response['email']
-        return templates.TemplateResponse('/member-admin/captures.html', context=context)
+        return templates.TemplateResponse('/member-admin/user.html', context=context)
     logger.error(f"| falha ao logar com -- {form.get('email')} - {form.get('password')}")
     context['alert_message'] = "Email ou senha incorretos. Tente novamente."
     return templates.TemplateResponse('/member/login.html', context=context)
